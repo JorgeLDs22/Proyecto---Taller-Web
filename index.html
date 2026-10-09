@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Web Institucional - Universidad Nacional de Innovación Peruana</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>UNIP - Innovación Peruana</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#carreras">Carreras</a></li>
+                <li><a href="#malla">Malla Curricular</a></li>
+                <li><a href="#admision">Admisión</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="login.html" class="btn-intranet">Intranet (Ingreso)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Inicio -->
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Bienvenidos a la propuesta académica de nuestra institución.</p>
+            <p>Formamos profesionales preparados para los retos del futuro.</p>
+            <div class="cta-buttons">
+                <a href="#carreras"><button type="button">Ver Carreras</button></a>
+                <a href="#contacto"><button type="button">Solicitar Información</button></a>
+            </div>
+        </section>
+
+        <!-- Nosotros -->
+        <section id="nosotros">
+            <h2>Nosotros</h2>
+            <div class="grid-container">
+                <article>
+                    <h3>Información General</h3>
+                    <p>Somos una institución universitaria comprometida con la excelencia educativa y tecnológica.</p>
+                </article>
+                <article>
+                    <h3>Misión y Visión</h3>
+                    <p><strong>Misión:</strong> Brindar una educación superior de calidad orientada a la práctica.</p>
+                    <p><strong>Visión:</strong> Ser reconocidos como la universidad líder en innovación digital.</p>
+                </article>
+                <article>
+                    <h3>Valores Institucionales</h3>
+                    <ul>
+                        <li>Innovación</li>
+                        <li>Integridad</li>
+                        <li>Compromiso Social</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Carreras Profesionales -->
+        <section id="carreras">
+            <h2>Carreras Profesionales</h2>
+            <div class="grid-container">
+                <article>
+                    <h3>Ingeniería de Software</h3>
+                    <p><strong>Descripción:</strong> Carrera enfocada en el diseño, desarrollo y mantenimiento de sistemas informáticos complejos.</p>
+                    <p><strong>Perfil:</strong> Especialista en desarrollo backend y frontend, arquitecturas multiplataforma y gestión de bases de datos.</p>
+                </article>
+                <article>
+                    <h3>Administración de Empresas</h3>
+                    <p><strong>Descripción:</strong> Gestión corporativa, procesos logísticos y dirección estratégica de negocios.</p>
+                    <p><strong>Perfil:</strong> Gestor capaz de liderar equipos y optimizar recursos globales.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Malla Curricular -->
+        <section id="malla">
+            <h2>Malla Curricular - Ingeniería de Software</h2>
+            <table>
+                <caption>Distribución de asignaturas por ciclos académicos</caption>
+                <thead>
+                    <tr>
+                        <th>Ciclo</th>
+                        <th>Asignaturas</th>
+                        <th>Créditos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ciclo I</td>
+                        <td>Matemática Básica, Introducción a la Algoritmia</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Ciclo II</td>
+                        <td>Taller de Programación Web, Base de Datos I</td>
+                        <td>22</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Admisión -->
+        <section id="admision">
+            <h2>Admisión</h2>
+            <p>Conoce nuestro proceso de postulación y asegura tu futuro profesional.</p>
+            <h3>Requisitos</h3>
+            <ul>
+                <li>Certificado de estudios secundarios.</li>
+                <li>Copia de DNI.</li>
+                <li>Pago por derecho de admisión.</li>
+            </ul>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Déjanos tus datos y nos comunicaremos contigo.</p>
+            <form action="procesar.php" method="POST">
+                <div class="form-group">
+                    <label for="nombres">Nombres Completos:</label>
+                    <input type="text" id="nombres" name="nombres" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono / Celular:</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                <div class="form-group">
+                    <label for="interes">Carrera de Interés:</label>
+                    <select id="interes" name="interes">
+                        <option value="software">Ingeniería de Software</option>
+                        <option value="administracion">Administración de Empresas</option>
+                    </select>
+                </div>
+                <button type="submit">Enviar Datos</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Universidad Nacional de Innovación Peruana. Todos los derechos reservados.</p>
+        <p>Dirección Institucional | Teléfono: (01) 123-4567 | <a href="mailto:informes@uip.edu.pe">informes@uip.edu.pe</a></p>
+    </footer>
+
+</body>
+</html>
