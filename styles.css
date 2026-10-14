@@ -204,3 +204,33 @@ footer a {
     color: #ff9999;
     text-decoration: none;
 }
+
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo img {
+    width: 50px;
+    height: auto;
+    background-color: #1a1a1a;
+}
+
+#carreras .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#carreras .grid-container article {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#carreras .grid-container article img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
