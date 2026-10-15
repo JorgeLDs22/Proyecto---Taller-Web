@@ -1,236 +1,435 @@
-/* === ESTILOS CSS3 INSTITUCIONALES === */
+/* VARIABLES DE LA PALETA DE COLORES INSTITUCIONAL UNIP */
 :root {
-    --primary-color: #8B0000; /* Rojo institucional / Borgoña */
-    --secondary-color: #1a1a1a;
-    --accent-color: #f4f6f8;
-    --text-color: #333333;
-    --white: #ffffff;
+    --azul-noche: #101827;
+    --dorado-unip: #D4A64A;
+    --blanco-calido: #F7F5EF;
+    --pizarra-azul: #242C3A;
+    --blanco: #FFFFFF;
+    --gris-azulado: #647084;
 }
 
+/* CONFIGURACIÓN BASE Y TIPOGRAFÍA*/
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    color: var(--text-color);
-    background-color: var(--accent-color);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--blanco-calido);
+    color: var(--pizarra-azul);
     line-height: 1.6;
 }
 
-/* Header y Navegación */
+/* ENCABEZADO Y NAVEGACIÓN (<header> y <nav>) */
 header {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: var(--azul-noche);
+    color: var(--blanco);
+    padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--dorado-unip);
+    box-shadow: 0 4px 12px rgba(16, 24, 39, 0.25);
 }
 
-header h1 {
-    font-size: 1.4rem;
-    color: var(--white);
+.titulo {
+    font-size: 1.35rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--blanco);
+}
+
+.titulo img {
+    height: 48px;
+    width: auto;
+    border-radius: 6px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    align-items: center;
     gap: 1.5rem;
+    align-items: center;
     flex-wrap: wrap;
 }
 
 nav a {
-    color: var(--white);
+    color: var(--blanco-calido);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--primary-color);
+    color: var(--dorado-unip);
 }
 
+/* Botón destacado para la Intranet */
 .btn-intranet {
-    background-color: var(--primary-color);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    color: var(--white) !important;
-    font-weight: bold;
+    background-color: var(--dorado-unip);
+    color: var(--azul-noche) !important;
+    padding: 0.55rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .btn-intranet:hover {
-    background-color: #a50000;
+    background-color: var(--blanco);
+    transform: translateY(-2px);
 }
 
-/* Main y Secciones */
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
+/* ESTRUCTURA DE SECCIONES (<main> y <section>)*/
 section {
-    background: var(--white);
-    margin-bottom: 2rem;
-    padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 4.5rem 8%;
 }
 
-h2 {
-    color: var(--primary-color);
-    margin-bottom: 1.2rem;
-    font-size: 1.8rem;
-    border-bottom: 2px solid var(--accent-color);
+/* Alternancia visual de colores por sección para mejorar el UX */
+#nosotros, #malla, #contacto {
+    background-color: var(--blanco-calido);
+}
+
+#carreras {
+    background-color: var(--blanco);
+}
+
+/* Sección Admisión en modo oscuro institucional para romper la monotonía */
+#admision {
+    background-color: var(--pizarra-azul);
+    color: var(--blanco);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: var(--azul-noche);
+    margin-bottom: 1.5rem;
+    position: relative;
     padding-bottom: 0.5rem;
 }
 
-h3 {
-    margin: 1rem 0 0.5rem 0;
-    color: var(--secondary-color);
+#admision h2, #admision h3 {
+    color: var(--dorado-unip);
 }
 
-p {
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 65px;
+    height: 4px;
+    background-color: var(--dorado-unip);
+    border-radius: 2px;
+}
+
+/* SECCIÓN INICIO (Hero Banner) */
+#inicio {
+    background: linear-gradient(135deg, var(--azul-noche) 0%, var(--pizarra-azul) 100%);
+    color: var(--blanco);
+    text-align: center;
+    padding: 6.5rem 8%;
+}
+
+#inicio h2 {
+    color: var(--dorado-unip);
+    font-size: 2.6rem;
     margin-bottom: 1rem;
 }
 
-/* Botones de Acción */
+#inicio h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#inicio p {
+    font-size: 1.2rem;
+    color: var(--blanco-calido);
+    max-width: 680px;
+    margin: 0 auto 0.8rem auto;
+}
+
 .cta-buttons {
-    margin-top: 1.5rem;
+    margin-top: 2.2rem;
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
 }
 
-button, .btn {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background 0.3s;
+.cta-buttons a {
     text-decoration: none;
-    display: inline-block;
 }
 
-button:hover, .btn:hover {
-    background-color: #600000;
+.cta-buttons button {
+    padding: 0.85rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-/* Artículos y Grid */
+/* Primer botón: Dorado principal */
+.cta-buttons a:first-child button {
+    background-color: var(--dorado-unip);
+    color: var(--azul-noche);
+    border: 2px solid var(--dorado-unip);
+}
+
+.cta-buttons a:first-child button:hover {
+    background-color: transparent;
+    color: var(--dorado-unip);
+}
+
+/* Segundo botón: Borde blanco cálido */
+.cta-buttons a:last-child button {
+    background-color: transparent;
+    color: var(--blanco-calido);
+    border: 2px solid var(--blanco-calido);
+}
+
+.cta-buttons a:last-child button:hover {
+    background-color: var(--blanco-calido);
+    color: var(--azul-noche);
+}
+
+/* TARJETAS Y GRILLAS (Nosotros y Carreras)*/
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+/* Diseño responsivo para pantallas medianas (tablets) y celulares */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 por fila en tablets */
+    }
 }
 
+@media (max-width: 650px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 por fila en celulares */
+    }
+}
 article {
-    background: var(--accent-color);
-    padding: 1.5rem;
-    border-radius: 6px;
-    border-left: 4px solid var(--primary-color);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--dorado-unip);
+    box-shadow: 0 4px 15px rgba(16, 24, 39, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Tablas */
+#carreras article {
+    background-color: var(--blanco-calido);
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(16, 24, 39, 0.12);
+}
+
+article h3 {
+    color: var(--azul-noche);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+article p {
+    color: var(--pizarra-azul);
+    margin-bottom: 0.8rem;
+}
+
+article ul {
+    margin-left: 1.2rem;
+    color: var(--gris-azulado);
+}
+
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-top: 1rem;
+    border: 1px solid rgba(100, 112, 132, 0.2);
+}
+
+/* TABLA DE MALLA CURRICULAR (<table>) */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    background-color: var(--blanco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(16, 24, 39, 0.06);
+}
+
+caption {
+    font-weight: 600;
+    color: var(--gris-azulado);
+    margin-bottom: 0.8rem;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+thead {
+    background-color: var(--azul-noche);
+    color: var(--dorado-unip);
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
+    padding: 1rem 1.2rem;
     text-align: left;
+    border-bottom: 1px solid rgba(100, 112, 132, 0.2);
 }
 
-th {
-    background-color: var(--primary-color);
-    color: var(--white);
+tbody tr:hover {
+    background-color: rgba(212, 166, 74, 0.08);
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+/*  SECCIÓN ADMISIÓN */
+#admision p {
+    color: var(--blanco-calido);
+    margin-bottom: 1.2rem;
 }
 
-/* Formularios */
+#admision ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    color: var(--blanco-calido);
+}
+
+#admision li {
+    margin-bottom: 0.5rem;
+}
+
+/* FORMULARIO DE CONTACTO (<form>) */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+    background-color: var(--blanco);
+    padding: 2.5rem;
+    border-radius: 8px;
     max-width: 600px;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(16, 24, 39, 0.08);
+    border-left: 5px solid var(--azul-noche);
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
+    margin-bottom: 1.3rem;
 }
 
 label {
+    display: block;
     font-weight: 600;
+    color: var(--azul-noche);
+    margin-bottom: 0.4rem;
 }
 
 input, select {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid var(--gris-azulado);
+    border-radius: 6px;
     font-size: 1rem;
+    color: var(--pizarra-azul);
+    background-color: var(--blanco-calido);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Footer */
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--dorado-unip);
+    background-color: var(--blanco);
+    box-shadow: 0 0 0 3px rgba(212, 166, 74, 0.2);
+}
+
+form button[type="submit"] {
+    background-color: var(--azul-noche);
+    color: var(--dorado-unip);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+    border: 2px solid var(--azul-noche);
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--dorado-unip);
+    color: var(--azul-noche);
+    border-color: var(--dorado-unip);
+}
+
+/* PIE DE PÁGINA (<footer>)*/
 footer {
-    background-color: var(--secondary-color);
-    color: var(--white);
+    background-color: var(--azul-noche);
+    color: var(--gris-azulado);
     text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
+    padding: 2.5rem 5%;
+    border-top: 3px solid var(--dorado-unip);
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin-bottom: 0.4rem;
 }
 
 footer a {
-    color: #ff9999;
+    color: var(--dorado-unip);
     text-decoration: none;
+    font-weight: 600;
 }
 
-.titulo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+footer a:hover {
+    text-decoration: underline;
 }
-
-.titulo img {
-    width: 50px;
-    height: auto;
-    background-color: #1a1a1a;
-}
-
-#carreras .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-#carreras .grid-container article {
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-#carreras .grid-container article img {
+/*CORRECCIÓN Y DISEÑO DE LOGIN (Intranet) */
+main {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
+}
+
+/* Evita que las secciones o contenedores de login se encojan */
+.login-container, 
+.login-section, 
+main > section:only-child {
+    width: 100%;
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Asegura que el título y textos ocupen todo el ancho sin partirse */
+main > section:only-child h2,
+main > section:only-child p {
+    width: 100%;
+    text-align: left;
+}
+
+/*Fuerza al formulario a tener un ancho amplio y cómodo */
+form {
+    width: 100%;
+    min-width: 320px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
