@@ -61,28 +61,27 @@
     </div>
 </section>
         <!-- Malla Curricular -->
-        <section id="malla">
-            <h2>Malla Curricular</h2>
+        <!-- Malla Curricular -->
+<section id="malla">
+    <h2>Malla Curricular</h2>
+    <div class="form-group selector-malla">
+        <label for="selectCarrera">Elige una carrera:</label>
+        <select id="selectCarrera">
+            <option value="software">Ingeniería de Software</option>
+            <option value="administracion">Administración de Empresas</option>
+            <option value="deporte">Ciencias de la Actividad Física y del Deporte</option>
+            <option value="industrial">Ingeniería Industrial</option>
+            <option value="veterinaria">Veterinaria y Zootecnia</option>
+            <option value="psicologia">Psicología</option>
+        </select>
+    </div>
 
-            <div class="form-group selector-malla">
-                <label for="selectCarrera">Elige una carrera:</label>
-                <select id="selectCarrera">
-                    <option value="software">Ingeniería de Software</option>
-                    <option value="administracion">Administración de Empresas</option>
-                    <option value="deporte">Ciencias de la Actividad Física y del Deporte</option>
-                    <option value="industrial">Ingeniería Industrial</option>
-                    <option value="veterinaria">Veterinaria y Zootecnia</option>
-                    <option value="psicologia">Psicología</option>
-                </select>
-            </div>
+    <input type="radio" name="pagina" id="p1" class="radio-malla" checked>
+    <input type="radio" name="pagina" id="p2" class="radio-malla">
+    <input type="radio" name="pagina" id="p3" class="radio-malla">
+    <input type="radio" name="pagina" id="p4" class="radio-malla">
 
-            <!-- Posiciones del carrusel (ocultas): p1 = ciclos 1-3, p2 = 4-6, p3 = 7-9, p4 = 8-10 -->
-            <input type="radio" name="pagina" id="p1" class="radio-malla" checked>
-            <input type="radio" name="pagina" id="p2" class="radio-malla">
-            <input type="radio" name="pagina" id="p3" class="radio-malla">
-            <input type="radio" name="pagina" id="p4" class="radio-malla">
-
-            <div class="carrusel">
+    <div class="carrusel">
                 <!-- Ingeniería de Software -->
                 <div class="malla malla-software">
                     <div class="viewport">
@@ -728,16 +727,16 @@
             </div>
 
             <div class="flechas">
-                <span class="flecha prev inactiva i-p1">&larr;</span>
-                <label for="p1" class="flecha prev a-p1" title="Anterior">&larr;</label>
-                <label for="p2" class="flecha prev a-p2" title="Anterior">&larr;</label>
-                <label for="p3" class="flecha prev a-p3" title="Anterior">&larr;</label>
+        <span class="flecha prev inactiva i-p1">&larr;</span>
+        <label for="p1" class="flecha prev a-p1" title="Anterior">&larr;</label>
+        <label for="p2" class="flecha prev a-p2" title="Anterior">&larr;</label>
+        <label for="p3" class="flecha prev a-p3" title="Anterior">&larr;</label>
 
-                <label for="p2" class="flecha next a-p2" title="Siguiente">&rarr;</label>
-                <label for="p3" class="flecha next a-p3" title="Siguiente">&rarr;</label>
-                <label for="p4" class="flecha next a-p4" title="Siguiente">&rarr;</label>
-                <span class="flecha next inactiva i-p4">&rarr;</span>
-            </div>
+        <label for="p2" class="flecha next a-p2" title="Siguiente">&rarr;</label>
+        <label for="p3" class="flecha next a-p3" title="Siguiente">&rarr;</label>
+        <label for="p4" class="flecha next a-p4" title="Siguiente">&rarr;</label>
+        <span class="flecha next inactiva i-p4">&rarr;</span>
+    </div>
         </section>
 
 <!-- Sección: Admisión y Contacto -->
