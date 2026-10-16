@@ -450,6 +450,9 @@ form {
 }
 
 /* Solo se muestra la malla de la carrera elegida en el select */
+#malla { --gap: 1.5rem; --paso: calc((100% - 2 * var(--gap)) / 3 + var(--gap)); }
+.selector-malla { max-width: 350px; }
+.radio-malla { position: absolute; opacity: 0; pointer-events: none; }
 .malla { display: none; }
 
 #malla:has(#selectCarrera option[value="software"]:checked) .malla-software,
@@ -457,109 +460,31 @@ form {
 #malla:has(#selectCarrera option[value="deporte"]:checked) .malla-deporte,
 #malla:has(#selectCarrera option[value="industrial"]:checked) .malla-industrial,
 #malla:has(#selectCarrera option[value="veterinaria"]:checked) .malla-veterinaria,
-#malla:has(#selectCarrera option[value="psicologia"]:checked) .malla-psicologia {
-    display: block;
-}
+#malla:has(#selectCarrera option[value="psicologia"]:checked) .malla-psicologia { display: block; }
 
-.viewport {
-    overflow: hidden;
-    margin-top: 2rem;
-}
-
-.track {
-    display: flex;
-    gap: var(--gap);
-    transition: transform 0.5s ease;
-}
-
-.ciclo {
-    flex: 0 0 calc((100% - 2 * var(--gap)) / 3);
-}
-
-.ciclo h3 {
-    background-color: var(--azul-noche);
-    color: var(--dorado-unip);
-    text-align: center;
-    padding: 0.8rem;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
+.viewport { overflow: hidden; margin-top: 2rem; }
+.track { display: flex; gap: var(--gap); transition: transform 0.5s ease; }
+.ciclo { flex: 0 0 calc((100% - 2 * var(--gap)) / 3); }
+.ciclo h3 { background-color: var(--azul-noche); color: var(--dorado-unip); text-align: center; padding: 0.8rem; border-radius: 6px; font-size: 1.1rem; margin-bottom: 1rem; }
 .ciclo ul { list-style: none; }
+.ciclo li { position: relative; padding-left: 1.2rem; margin-bottom: 0.8rem; text-transform: uppercase; font-size: 0.9rem; color: var(--pizarra-azul); }
+.ciclo li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 7px; height: 7px; background-color: var(--dorado-unip); }
 
-.ciclo li {
-    position: relative;
-    padding-left: 1.2rem;
-    margin-bottom: 0.8rem;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    color: var(--pizarra-azul);
-}
-
-.ciclo li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.5em;
-    width: 7px;
-    height: 7px;
-    background-color: var(--dorado-unip);
-}
-
-/* Posiciones: cada paso mueve 3 ciclos (el último deja ver el 8, 9 y 10) */
 #p2:checked ~ .carrusel .track { transform: translateX(calc(-3 * var(--paso))); }
 #p3:checked ~ .carrusel .track { transform: translateX(calc(-6 * var(--paso))); }
 #p4:checked ~ .carrusel .track { transform: translateX(calc(-7 * var(--paso))); }
 
-/* Flechas */
-.flechas {
-    display: grid;
-    grid-template-columns: 52px 52px;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.flecha {
-    display: none;
-    width: 52px;
-    height: 52px;
-    border: 2px solid var(--azul-noche);
-    border-radius: 50%;
-    color: var(--azul-noche);
-    font-size: 1.5rem;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    user-select: none;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.flecha:not(.inactiva):hover {
-    background-color: var(--dorado-unip);
-    border-color: var(--dorado-unip);
-}
-
-.flecha.inactiva {
-    opacity: 0.3;
-    cursor: not-allowed;
-}
-
+.flechas { display: grid; grid-template-columns: 52px 52px; gap: 1rem; justify-content: center; margin-top: 2rem; }
+.flecha { display: none; width: 52px; height: 52px; border: 2px solid var(--azul-noche); border-radius: 50%; color: var(--azul-noche); font-size: 1.5rem; align-items: center; justify-content: center; cursor: pointer; user-select: none; transition: 0.3s ease; }
+.flecha:not(.inactiva):hover { background-color: var(--dorado-unip); border-color: var(--dorado-unip); }
+.flecha.inactiva { opacity: 0.3; cursor: not-allowed; }
 .flecha.prev { grid-column: 1; grid-row: 1; }
 .flecha.next { grid-column: 2; grid-row: 1; }
 
-/* Qué flechas se ven según la posición actual */
-#p1:checked ~ .flechas .prev.i-p1,
-#p1:checked ~ .flechas .next.a-p2,
-#p2:checked ~ .flechas .prev.a-p1,
-#p2:checked ~ .flechas .next.a-p3,
-#p3:checked ~ .flechas .prev.a-p2,
-#p3:checked ~ .flechas .next.a-p4,
-#p4:checked ~ .flechas .prev.a-p3,
-#p4:checked ~ .flechas .next.i-p4 {
-    display: flex;
-}
+#p1:checked ~ .flechas .prev.i-p1, #p1:checked ~ .flechas .next.a-p2,
+#p2:checked ~ .flechas .prev.a-p1, #p2:checked ~ .flechas .next.a-p3,
+#p3:checked ~ .flechas .prev.a-p2, #p3:checked ~ .flechas .next.a-p4,
+#p4:checked ~ .flechas .prev.a-p3, #p4:checked ~ .flechas .next.i-p4 { display: flex; }
 
 @media (max-width: 650px) {
     #malla { --gap: 0.8rem; }
