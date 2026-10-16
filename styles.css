@@ -225,6 +225,15 @@ section h2::after {
         grid-template-columns: 1fr; /* 1 por fila en celulares */
     }
 }
+
+.carreras-carousel { display: flex; gap: 2rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 2rem 0.5rem; margin-top: 1rem; scrollbar-width: thin; scrollbar-color: var(--dorado-unip) var(--blanco-calido); }
+.carreras-carousel::-webkit-scrollbar { height: 10px; }
+.carreras-carousel::-webkit-scrollbar-track { background: var(--blanco-calido); border-radius: 5px; }
+.carreras-carousel::-webkit-scrollbar-thumb { background: var(--dorado-unip); border-radius: 5px; }
+.carreras-carousel article { min-width: 320px; flex: 0 0 calc(33.333% - 1.35rem); scroll-snap-align: center; }
+@media (max-width: 992px) { .carreras-carousel article { flex: 0 0 calc(50% - 1rem); } }
+@media (max-width: 650px) { .carreras-carousel article { flex: 0 0 85%; } }
+
 article {
     background-color: var(--blanco);
     padding: 2rem;
