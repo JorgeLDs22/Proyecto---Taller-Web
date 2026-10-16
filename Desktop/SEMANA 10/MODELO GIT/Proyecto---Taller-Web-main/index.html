@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Web Institucional - Universidad Nacional de Innovación Peruana</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="titulo"> <img src="./img/logo.png" alt="Logo UNIP">   UNIP - Innovación Peruana</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#carreras">Carreras</a></li>
+                <li><a href="#malla">Malla Curricular</a></li>
+                <li><a href="#admision">Admisión</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="login.html" class="btn-intranet">Intranet (Ingreso)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Inicio -->
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Bienvenidos a la propuesta académica de nuestra institución.</p>
+            <p>Formamos profesionales preparados para los retos del futuro.</p>
+            <div class="cta-buttons">
+                <a href="#carreras"><button type="button">Ver Carreras</button></a>
+                <a href="#contacto"><button type="button">Solicitar Información</button></a>
+            </div>
+        </section>
+
+ <!-- Nosotros -->
+<section id="nosotros">
+    <h2>Nosotros</h2>
+    <div class="grid-container">
+        <article><h3>Información General</h3><p>Somos una institución universitaria comprometida con la excelencia educativa y tecnológica.</p></article>
+        <article><h3>Misión y Visión</h3><p><strong>Misión:</strong> Educación superior de calidad orientada a la práctica.</p><p><strong>Visión:</strong> Liderazgo en innovación digital.</p></article>
+        <article><h3>Valores Institucionales</h3><ul><li>Innovación</li><li>Integridad</li><li>Compromiso Social</li></ul></article>
+        <article><h3>Nuestra Historia</h3><p>Fundada en 2026, hemos formado a más de 1000 profesionales en tecnología, negocios e ingeniería.</p></article>
+        <article><h3>Acreditaciones</h3><ul><li>Licenciamiento SUNEDU</li><li>Acreditaciones de calidad</li><li>Reconocimientos y rankings</li></ul></article>
+        <article><h3>Infraestructura</h3><p>Laboratorios equipados, biblioteca digital, aulas inteligentes y espacios de innovación.</p></article>
+    </div>
+</section>
+
+        <!-- Carreras Profesionales -->
+        <section id="carreras">
+            <h2>Carreras Profesionales</h2>
+            <div class="grid-container">
+                <!--FILA 1-->
+                <article>
+                    <h3>Ingeniería de Software</h3>
+                    <p><strong>Descripción:</strong> Carrera enfocada en el diseño, desarrollo y mantenimiento de sistemas informáticos complejos.</p>
+                    <p><strong>Perfil:</strong> Especialista en desarrollo backend y frontend, arquitecturas multiplataforma y gestión de bases de datos.</p>
+                    <img src ="./img/carrera1.jpg" alt="Ingeniería de Software">
+                </article>
+                
+                <article>
+                    <h3>Administración de Empresas</h3>
+                    <p><strong>Descripción:</strong> Gestión corporativa, procesos logísticos y dirección estratégica de negocios.</p>
+                    <p><strong>Perfil:</strong> Gestor capaz de liderar equipos y optimizar recursos globales.</p>
+                    <img src ="./img/carrera2.jpg" alt="Administración de Empresas">
+                </article>
+
+                <article>
+                    <h3>Ciencias de la Actividad Física y del Deporte</h3>
+                    <p><strong>Descripción:</strong> Formación en la planificación, implementación y evaluación de programas de actividad física y deportiva.</p>
+                    <p><strong>Perfil:</strong> Profesional capaz de diseñar e implementar estrategias para promover la salud y el bienestar a través de la actividad física.</p>
+                    <img src ="./img/carrera3.jpg" alt="Ciencias de la Actividad Física y del Deporte">
+                </article>
+
+                <!--FILA 2-->
+                <article>
+                    <h3>Ingeniería Industrial</h3>
+                    <p><strong>Descripción:</strong> Optimización de procesos productivos y logísticos en entornos industriales.</p>
+                    <p><strong>Perfil:</strong> Profesional capaz de mejorar la eficiencia y productividad de sistemas industriales.</p>
+                    <img src ="./img/carrera4.jpg" alt="Ingeniería Industrial">
+                </article>
+                <article>
+                    <h3>Veterinaria y Zootecnia</h3>
+                    <p><strong>Descripción:</strong> Formación en la atención y cuidado de animales domésticos y silvestres.</p>
+                    <p><strong>Perfil:</strong> Profesional capaz de diagnosticar y tratar enfermedades en animales, promoviendo su bienestar y salud.</p>
+                    <img src ="./img/carrera5.jpg" alt="Veterinaria y Zootecnia">
+                </article>
+                <article>   
+                    <h3>Psicología</h3>
+                    <p><strong>Descripción:</strong> Estudio de los procesos mentales y comportamientos humanos.</p>
+                    <p><strong>Perfil:</strong> Profesional capaz de evaluar y tratar trastornos psicológicos, promoviendo el bienestar emocional y social.</p>
+                    <img src ="./img/carrera6.jpg" alt="Psicología">
+                </article>
+            </div>
+        </section>
+
+        <!-- Malla Curricular -->
+        <section id="malla">
+            <h2>Malla Curricular</h2>
+
+            <div class="form-group selector-malla">
+                <label for="selectCarrera">Elige una carrera:</label>
+                <select id="selectCarrera">
+                    <option value="software">Ingeniería de Software</option>
+                    <option value="administracion">Administración de Empresas</option>
+                    <option value="deporte">Ciencias de la Actividad Física y del Deporte</option>
+                    <option value="industrial">Ingeniería Industrial</option>
+                    <option value="veterinaria">Veterinaria y Zootecnia</option>
+                    <option value="psicologia">Psicología</option>
+                </select>
+            </div>
+
+            <!-- Posiciones del carrusel (ocultas): p1 = ciclos 1-3, p2 = 4-6, p3 = 7-9, p4 = 8-10 -->
+            <input type="radio" name="pagina" id="p1" class="radio-malla" checked>
+            <input type="radio" name="pagina" id="p2" class="radio-malla">
+            <input type="radio" name="pagina" id="p3" class="radio-malla">
+            <input type="radio" name="pagina" id="p4" class="radio-malla">
+
+            <div class="carrusel">
+                <!-- Ingeniería de Software -->
+                <div class="malla malla-software">
+                    <div class="viewport">
+                        <div class="track">
+                            <div class="ciclo">
+                                <h3>Ciclo 1</h3>
+                                <ul>
+                                    <li>Matemática Básica</li>
+                                    <li>Comunicación y Lenguaje</li>
+                                    <li>Introducción a la Ingeniería de Software</li>
+                                    <li>Fundamentos de Programación</li>
+                                    <li>Metodología del Aprendizaje Universitario</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 2</h3>
+                                <ul>
+                                    <li>Matemática Discreta</li>
+                                    <li>Cálculo I</li>
+                                    <li>Algoritmia</li>
+                                    <li>Redacción Académica</li>
+                                    <li>Física General</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 3</h3>
+                                <ul>
+                                    <li>Cálculo II</li>
+                                    <li>Programación Orientada a Objetos</li>
+                                    <li>Estadística y Probabilidades</li>
+                                    <li>Arquitectura de Computadoras</li>
+                                    <li>Base de Datos I</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 4</h3>
+                                <ul>
+                                    <li>Estructura de Datos</li>
+                                    <li>Base de Datos II</li>
+                                    <li>Ingeniería de Requisitos</li>
+                                    <li>Redes y Comunicación de Datos I</li>
+                                    <li>Ética y Ciudadanía</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 5</h3>
+                                <ul>
+                                    <li>Taller de Programación Web</li>
+                                    <li>Sistemas Operativos</li>
+                                    <li>Análisis y Diseño de Algoritmos</li>
+                                    <li>Redes y Comunicación de Datos II</li>
+                                    <li>Diseño de Patrones</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 6</h3>
+                                <ul>
+                                    <li>Análisis y Diseño de Sistemas de Información</li>
+                                    <li>Administración y Organización de Empresas</li>
+                                    <li>JavaScript Avanzado</li>
+                                    <li>Marcos de Desarrollo Web</li>
+                                    <li>Gestión de Proyectos</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 7</h3>
+                                <ul>
+                                    <li>Desarrollo de Software</li>
+                                    <li>Teoría de la Computación</li>
+                                    <li>Seguridad Informática</li>
+                                    <li>Lenguajes de Programación</li>
+                                    <li>Desarrollo Web Integrado</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 8</h3>
+                                <ul>
+                                    <li>Inteligencia Artificial</li>
+                                    <li>Desarrollo de Aplicaciones Móviles</li>
+                                    <li>Calidad y Pruebas de Software</li>
+                                    <li>Arquitectura de Software</li>
+                                    <li>Computación en la Nube</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 9</h3>
+                                <ul>
+                                    <li>Ciencia de Datos</li>
+                                    <li>Internet de las Cosas</li>
+                                    <li>Gestión de Servicios de TI</li>
+                                    <li>Proyecto de Investigación</li>
+                                    <li>Electivo de Especialidad</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 10</h3>
+                                <ul>
+                                    <li>Taller de Tesis</li>
+                                    <li>Prácticas Preprofesionales</li>
+                                    <li>Emprendimiento Tecnológico</li>
+                                    <li>Auditoría de Sistemas</li>
+                                    <li>Seminario de Actualización Profesional</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Administración de Empresas -->
+                <div class="malla malla-administracion">
+                    <div class="viewport">
+                        <div class="track">
+                            <div class="ciclo">
+                                <h3>Ciclo 1</h3>
+                                <ul>
+                                    <li>Matemática Básica</li>
+                                    <li>Comunicación y Lenguaje</li>
+                                    <li>Fundamentos de Administración</li>
+                                    <li>Introducción a la Economía</li>
+                                    <li>Metodología del Aprendizaje Universitario</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 2</h3>
+                                <ul>
+                                    <li>Contabilidad General</li>
+                                    <li>Microeconomía</li>
+                                    <li>Estadística Descriptiva</li>
+                                    <li>Redacción Académica</li>
+                                    <li>Informática para los Negocios</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 3</h3>
+                                <ul>
+                                    <li>Macroeconomía</li>
+                                    <li>Contabilidad de Costos</li>
+                                    <li>Matemática Financiera</li>
+                                    <li>Derecho Empresarial</li>
+                                    <li>Comportamiento Organizacional</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 4</h3>
+                                <ul>
+                                    <li>Marketing Fundamental</li>
+                                    <li>Gestión del Talento Humano</li>
+                                    <li>Estadística Inferencial</li>
+                                    <li>Costos y Presupuestos</li>
+                                    <li>Ética y Ciudadanía</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 5</h3>
+                                <ul>
+                                    <li>Investigación de Mercados</li>
+                                    <li>Finanzas Corporativas</li>
+                                    <li>Gestión de Operaciones</li>
+                                    <li>Derecho Laboral</li>
+                                    <li>Sistemas de Información Gerencial</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 6</h3>
+                                <ul>
+                                    <li>Marketing Estratégico</li>
+                                    <li>Gestión de la Cadena de Suministro</li>
+                                    <li>Análisis de Estados Financieros</li>
+                                    <li>Planeamiento Estratégico</li>
+                                    <li>Negociación Empresarial</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 7</h3>
+                                <ul>
+                                    <li>Gestión de Proyectos</li>
+                                    <li>Comercio Internacional</li>
+                                    <li>Finanzas Internacionales</li>
+                                    <li>Gestión de la Calidad</li>
+                                    <li>Responsabilidad Social Empresarial</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 8</h3>
+                                <ul>
+                                    <li>Marketing Digital</li>
+                                    <li>Gestión de la Innovación</li>
+                                    <li>Evaluación de Proyectos de Inversión</li>
+                                    <li>Gerencia de Ventas</li>
+                                    <li>Liderazgo y Dirección de Equipos</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 9</h3>
+                                <ul>
+                                    <li>Consultoría Empresarial</li>
+                                    <li>Gestión de Riesgos</li>
+                                    <li>Business Intelligence</li>
+                                    <li>Seminario de Investigación</li>
+                                    <li>Electivo de Especialidad</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 10</h3>
+                                <ul>
+                                    <li>Taller de Tesis</li>
+                                    <li>Prácticas Preprofesionales</li>
+                                    <li>Plan de Negocios</li>
+                                    <li>Gobierno Corporativo</li>
+                                    <li>Seminario de Actualización Profesional</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ciencias de la Actividad Física y del Deporte -->
+                <div class="malla malla-deporte">
+                    <div class="viewport">
+                        <div class="track">
+                            <div class="ciclo">
+                                <h3>Ciclo 1</h3>
+                                <ul>
+                                    <li>Anatomía Humana</li>
+                                    <li>Comunicación y Lenguaje</li>
+                                    <li>Introducción a las Ciencias del Deporte</li>
+                                    <li>Matemática Básica</li>
+                                    <li>Metodología del Aprendizaje Universitario</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 2</h3>
+                                <ul>
+                                    <li>Fisiología Humana</li>
+                                    <li>Historia y Fundamentos de la Educación Física</li>
+                                    <li>Bioquímica del Ejercicio</li>
+                                    <li>Atletismo I</li>
+                                    <li>Redacción Académica</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 3</h3>
+                                <ul>
+                                    <li>Biomecánica</li>
+                                    <li>Fisiología del Ejercicio</li>
+                                    <li>Psicología del Deporte</li>
+                                    <li>Gimnasia y Expresión Corporal</li>
+                                    <li>Natación I</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 4</h3>
+                                <ul>
+                                    <li>Teoría del Entrenamiento Deportivo</li>
+                                    <li>Nutrición Deportiva</li>
+                                    <li>Estadística Aplicada al Deporte</li>
+                                    <li>Deportes Colectivos I</li>
+                                    <li>Ética y Ciudadanía</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 5</h3>
+                                <ul>
+                                    <li>Valoración y Evaluación Física</li>
+                                    <li>Pedagogía del Deporte</li>
+                                    <li>Primeros Auxilios y Prevención de Lesiones</li>
+                                    <li>Deportes Colectivos II</li>
+                                    <li>Deportes Individuales</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 6</h3>
+                                <ul>
+                                    <li>Planificación del Entrenamiento</li>
+                                    <li>Fisiología Clínica del Ejercicio</li>
+                                    <li>Didáctica de la Actividad Física</li>
+                                    <li>Actividad Física y Salud</li>
+                                    <li>Metodología de la Investigación</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 7</h3>
+                                <ul>
+                                    <li>Entrenamiento de la Fuerza</li>
+                                    <li>Recreación y Tiempo Libre</li>
+                                    <li>Gestión Deportiva</li>
+                                    <li>Actividad Física para Poblaciones Especiales</li>
+                                    <li>Kinesiología Deportiva</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 8</h3>
+                                <ul>
+                                    <li>Alto Rendimiento Deportivo</li>
+                                    <li>Control y Análisis del Rendimiento</li>
+                                    <li>Gestión de Instalaciones Deportivas</li>
+                                    <li>Marketing Deportivo</li>
+                                    <li>Seminario de Investigación</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 9</h3>
+                                <ul>
+                                    <li>Programas de Acondicionamiento Físico</li>
+                                    <li>Rehabilitación y Readaptación Deportiva</li>
+                                    <li>Dirección de Eventos Deportivos</li>
+                                    <li>Proyecto de Investigación</li>
+                                    <li>Electivo de Especialidad</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 10</h3>
+                                <ul>
+                                    <li>Taller de Tesis</li>
+                                    <li>Prácticas Preprofesionales</li>
+                                    <li>Emprendimiento Deportivo</li>
+                                    <li>Legislación Deportiva</li>
+                                    <li>Seminario de Actualización Profesional</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ingeniería Industrial -->
+                <div class="malla malla-industrial">
+                    <div class="viewport">
+                        <div class="track">
+                            <div class="ciclo">
+                                <h3>Ciclo 1</h3>
+                                <ul>
+                                    <li>Matemática Básica</li>
+                                    <li>Comunicación y Lenguaje</li>
+                                    <li>Introducción a la Ingeniería Industrial</li>
+                                    <li>Dibujo Técnico</li>
+                                    <li>Metodología del Aprendizaje Universitario</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 2</h3>
+                                <ul>
+                                    <li>Cálculo I</li>
+                                    <li>Física I</li>
+                                    <li>Química General</li>
+                                    <li>Redacción Académica</li>
+                                    <li>Programación para Ingeniería</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 3</h3>
+                                <ul>
+                                    <li>Cálculo II</li>
+                                    <li>Física II</li>
+                                    <li>Estadística y Probabilidades</li>
+                                    <li>Estática y Resistencia de Materiales</li>
+                                    <li>Ingeniería de Métodos</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 4</h3>
+                                <ul>
+                                    <li>Ecuaciones Diferenciales</li>
+                                    <li>Procesos de Manufactura</li>
+                                    <li>Investigación de Operaciones I</li>
+                                    <li>Contabilidad y Costos</li>
+                                    <li>Ética y Ciudadanía</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 5</h3>
+                                <ul>
+                                    <li>Investigación de Operaciones II</li>
+                                    <li>Ingeniería de Métodos y Tiempos</li>
+                                    <li>Termodinámica</li>
+                                    <li>Gestión de la Calidad</li>
+                                    <li>Economía para Ingenieros</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 6</h3>
+                                <ul>
+                                    <li>Planeamiento y Control de la Producción</li>
+                                    <li>Diseño de Planta</li>
+                                    <li>Seguridad y Salud Ocupacional</li>
+                                    <li>Simulación de Sistemas</li>
+                                    <li>Ingeniería Económica</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 7</h3>
+                                <ul>
+                                    <li>Gestión de la Cadena de Suministro</li>
+                                    <li>Logística y Almacenes</li>
+                                    <li>Gestión del Mantenimiento</li>
+                                    <li>Control Estadístico de Procesos</li>
+                                    <li>Gestión Ambiental</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 8</h3>
+                                <ul>
+                                    <li>Gestión de Proyectos</li>
+                                    <li>Ingeniería de Costos</li>
+                                    <li>Lean Manufacturing</li>
+                                    <li>Automatización Industrial</li>
+                                    <li>Gestión del Talento Humano</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 9</h3>
+                                <ul>
+                                    <li>Evaluación de Proyectos de Inversión</li>
+                                    <li>Gestión de la Innovación</li>
+                                    <li>Seminario de Investigación</li>
+                                    <li>Proyecto de Investigación</li>
+                                    <li>Electivo de Especialidad</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 10</h3>
+                                <ul>
+                                    <li>Taller de Tesis</li>
+                                    <li>Prácticas Preprofesionales</li>
+                                    <li>Gerencia de Operaciones</li>
+                                    <li>Emprendimiento Industrial</li>
+                                    <li>Seminario de Actualización Profesional</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Veterinaria y Zootecnia -->
+                <div class="malla malla-veterinaria">
+                    <div class="viewport">
+                        <div class="track">
+                            <div class="ciclo">
+                                <h3>Ciclo 1</h3>
+                                <ul>
+                                    <li>Biología Celular</li>
+                                    <li>Comunicación y Lenguaje</li>
+                                    <li>Introducción a la Medicina Veterinaria</li>
+                                    <li>Matemática Básica</li>
+                                    <li>Metodología del Aprendizaje Universitario</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 2</h3>
+                                <ul>
+                                    <li>Anatomía Veterinaria I</li>
+                                    <li>Química Orgánica</li>
+                                    <li>Histología y Embriología</li>
+                                    <li>Bioestadística</li>
+                                    <li>Redacción Académica</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 3</h3>
+                                <ul>
+                                    <li>Anatomía Veterinaria II</li>
+                                    <li>Fisiología Veterinaria I</li>
+                                    <li>Bioquímica</li>
+                                    <li>Genética Animal</li>
+                                    <li>Microbiología Veterinaria</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 4</h3>
+                                <ul>
+                                    <li>Fisiología Veterinaria II</li>
+                                    <li>Nutrición Animal</li>
+                                    <li>Parasitología Veterinaria</li>
+                                    <li>Inmunología</li>
+                                    <li>Ética y Ciudadanía</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 5</h3>
+                                <ul>
+                                    <li>Patología General</li>
+                                    <li>Farmacología Veterinaria</li>
+                                    <li>Epidemiología</li>
+                                    <li>Producción de Bovinos</li>
+                                    <li>Producción de Porcinos</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 6</h3>
+                                <ul>
+                                    <li>Patología Sistémica</li>
+                                    <li>Clínica de Animales Menores I</li>
+                                    <li>Producción de Aves</li>
+                                    <li>Reproducción Animal</li>
+                                    <li>Salud Pública Veterinaria</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 7</h3>
+                                <ul>
+                                    <li>Clínica de Animales Menores II</li>
+                                    <li>Clínica de Animales Mayores</li>
+                                    <li>Cirugía Veterinaria I</li>
+                                    <li>Diagnóstico por Imágenes</li>
+                                    <li>Medicina Preventiva</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 8</h3>
+                                <ul>
+                                    <li>Cirugía Veterinaria II</li>
+                                    <li>Clínica de Fauna Silvestre</li>
+                                    <li>Tecnología de Alimentos de Origen Animal</li>
+                                    <li>Bienestar Animal</li>
+                                    <li>Metodología de la Investigación</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 9</h3>
+                                <ul>
+                                    <li>Medicina Interna Veterinaria</li>
+                                    <li>Anestesiología Veterinaria</li>
+                                    <li>Gestión de Empresas Pecuarias</li>
+                                    <li>Proyecto de Investigación</li>
+                                    <li>Electivo de Especialidad</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 10</h3>
+                                <ul>
+                                    <li>Taller de Tesis</li>
+                                    <li>Internado Veterinario</li>
+                                    <li>Emprendimiento Veterinario</li>
+                                    <li>Legislación Veterinaria</li>
+                                    <li>Seminario de Actualización Profesional</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Psicología -->
+                <div class="malla malla-psicologia">
+                    <div class="viewport">
+                        <div class="track">
+                            <div class="ciclo">
+                                <h3>Ciclo 1</h3>
+                                <ul>
+                                    <li>Introducción a la Psicología</li>
+                                    <li>Comunicación y Lenguaje</li>
+                                    <li>Biología Humana</li>
+                                    <li>Filosofía y Ética</li>
+                                    <li>Metodología del Aprendizaje Universitario</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 2</h3>
+                                <ul>
+                                    <li>Procesos Psicológicos Básicos</li>
+                                    <li>Psicología del Desarrollo I</li>
+                                    <li>Estadística Aplicada a la Psicología</li>
+                                    <li>Neuroanatomía</li>
+                                    <li>Redacción Académica</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 3</h3>
+                                <ul>
+                                    <li>Psicología del Desarrollo II</li>
+                                    <li>Psicología Social</li>
+                                    <li>Procesos Cognitivos</li>
+                                    <li>Psicofisiología</li>
+                                    <li>Teorías de la Personalidad</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 4</h3>
+                                <ul>
+                                    <li>Psicología Educativa</li>
+                                    <li>Psicometría</li>
+                                    <li>Psicopatología I</li>
+                                    <li>Metodología de la Investigación Psicológica</li>
+                                    <li>Ética y Ciudadanía</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 5</h3>
+                                <ul>
+                                    <li>Psicopatología II</li>
+                                    <li>Evaluación Psicológica I</li>
+                                    <li>Psicología Organizacional</li>
+                                    <li>Enfoques Psicoterapéuticos</li>
+                                    <li>Psicología Comunitaria</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 6</h3>
+                                <ul>
+                                    <li>Evaluación Psicológica II</li>
+                                    <li>Psicología Clínica</li>
+                                    <li>Orientación y Consejería</li>
+                                    <li>Psicología Forense</li>
+                                    <li>Estadística Inferencial</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 7</h3>
+                                <ul>
+                                    <li>Terapia Cognitivo Conductual</li>
+                                    <li>Psicología de la Salud</li>
+                                    <li>Psicología del Trabajo</li>
+                                    <li>Neuropsicología</li>
+                                    <li>Diseño de Investigación</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 8</h3>
+                                <ul>
+                                    <li>Psicoterapia Infantil y del Adolescente</li>
+                                    <li>Intervención en Crisis</li>
+                                    <li>Gestión del Talento Humano</li>
+                                    <li>Psicología Educativa Aplicada</li>
+                                    <li>Seminario de Investigación</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 9</h3>
+                                <ul>
+                                    <li>Psicoterapia de Pareja y Familia</li>
+                                    <li>Psicología Positiva</li>
+                                    <li>Proyecto de Investigación</li>
+                                    <li>Supervisión Clínica</li>
+                                    <li>Electivo de Especialidad</li>
+                                </ul>
+                            </div>
+                            <div class="ciclo">
+                                <h3>Ciclo 10</h3>
+                                <ul>
+                                    <li>Taller de Tesis</li>
+                                    <li>Prácticas Preprofesionales</li>
+                                    <li>Gestión de Servicios Psicológicos</li>
+                                    <li>Ética Profesional del Psicólogo</li>
+                                    <li>Seminario de Actualización Profesional</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flechas">
+                <span class="flecha prev inactiva i-p1">&larr;</span>
+                <label for="p1" class="flecha prev a-p1" title="Anterior">&larr;</label>
+                <label for="p2" class="flecha prev a-p2" title="Anterior">&larr;</label>
+                <label for="p3" class="flecha prev a-p3" title="Anterior">&larr;</label>
+
+                <label for="p2" class="flecha next a-p2" title="Siguiente">&rarr;</label>
+                <label for="p3" class="flecha next a-p3" title="Siguiente">&rarr;</label>
+                <label for="p4" class="flecha next a-p4" title="Siguiente">&rarr;</label>
+                <span class="flecha next inactiva i-p4">&rarr;</span>
+            </div>
+        </section>
+
+<!-- Sección: Admisión y Contacto -->
+<section id="admision-contacto">
+    <div class="split-container">
+        <!-- Bloque Admisión -->
+        <div class="admision-info">
+            <h2>Proceso de Admisión</h2>
+            <p>Asegura tu futuro profesional y únete a la nueva generación de líderes e innovadores tecnológicos. Nuestro proceso es rápido y 100% en línea.</p>
+            <h3>Requisitos Indispensables:</h3>
+            <ul class="lista-requisitos">
+                <li><span>📄</span> Certificado de estudios secundarios completos.</li>
+                <li><span>🪪</span> Copia de DNI, Pasaporte o Carnet de Extranjería.</li>
+                <li><span>💳</span> Comprobante de pago por derecho de admisión.</li>
+            </ul>
+        </div>
+
+    <footer>
+        <p>&copy; 2026 Universidad Nacional de Innovación Peruana. Todos los derechos reservados.</p>
+        <p>Dirección Institucional | Teléfono: (01) 123-4567 | <a href="mailto:informes@uip.edu.pe">informes@uip.edu.pe</a></p>
+    </footer>
+
+</body>
+</html>
