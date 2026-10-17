@@ -739,24 +739,84 @@
     </div>
         </section>
 
-<!-- Sección: Admisión y Contacto -->
-<section id="admision-contacto">
-    <div class="split-container">
-        <!-- Bloque Admisión -->
-        <div class="admision-info">
-            <h2>Proceso de Admisión</h2>
-            <p>Asegura tu futuro profesional y únete a la nueva generación de líderes e innovadores tecnológicos. Nuestro proceso es rápido y 100% en línea.</p>
-            <h3>Requisitos Indispensables:</h3>
-            <ul class="lista-requisitos">
-                <li><span>📄</span> Certificado de estudios secundarios completos.</li>
-                <li><span>🪪</span> Copia de DNI, Pasaporte o Carnet de Extranjería.</li>
-                <li><span>💳</span> Comprobante de pago por derecho de admisión.</li>
-            </ul>
-        </div>
+<!-- Sección Fusionada: Admisión y Contacto -->
+        <section id="admision-contacto">
+            <div class="split-container">
+                <!-- Bloque Admisión -->
+                <div class="admision-info">
+                    <h2>Proceso de Admisión</h2>
+                    <p>Asegura tu futuro profesional y únete a la nueva generación de líderes e innovadores tecnológicos. Nuestro proceso es rápido y 100% en línea.</p>
+                    <h3>Requisitos Indispensables:</h3>
+                    <ul class="lista-requisitos">
+                        <li><span>📄</span> Certificado de estudios secundarios completos.</li>
+                        <li><span>🪪</span> Copia de DNI, Pasaporte o Carnet de Extranjería.</li>
+                        <li><span>💳</span> Comprobante de pago por derecho de admisión.</li>
+                    </ul>
+                </div>
 
+                <!-- Bloque Contacto -->
+                <div class="contacto-form">
+                    <h2>Contáctanos</h2>
+                    <p>Déjanos tus datos y un asesor académico se comunicará contigo a la brevedad.</p>
+                    <form action="procesar.php" method="POST">
+                        <div class="form-group">
+                            <label for="nombres">Nombres Completos:</label>
+                            <input type="text" id="nombres" name="nombres" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo Electrónico:</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / Celular:</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                        <div class="form-group">
+                            <label for="interes">Carrera de Interés:</label>
+                            <select id="interes" name="interes">
+                                <option value="software">Ingeniería de Software</option>
+                                <option value="administracion">Administración de Empresas</option>
+                                <option value="deporte">Ciencias del Deporte</option>
+                                <option value="industrial">Ingeniería Industrial</option>
+                                <option value="veterinaria">Veterinaria y Zootecnia</option>
+                                <option value="psicologia">Psicología</option>
+                            </select>
+                        </div>
+                        <button type="submit">Enviar Datos</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Modernizado -->
     <footer>
-        <p>&copy; 2026 Universidad Nacional de Innovación Peruana. Todos los derechos reservados.</p>
-        <p>Dirección Institucional | Teléfono: (01) 123-4567 | <a href="mailto:informes@uip.edu.pe">informes@uip.edu.pe</a></p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Acerca de UNIP</h3>
+                <p>Institución universitaria comprometida con la excelencia educativa y tecnológica, formando a los profesionales que liderarán el mañana.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#carreras">Carreras Profesionales</a></li>
+                    <li><a href="#malla">Malla Curricular</a></li>
+                    <li><a href="login.html">Plataforma Intranet</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Sedes y Contacto</h3>
+                <p>📍 Sede Lima Norte: Av. Tecnológica 456</p>
+                <p>📞 Central Telefónica: (01) 123-4567</p>
+                <p>📱 WhatsApp Admisión: +51 987 654 321</p>
+                <p>✉️ <a href="mailto:informes@uip.edu.pe">informes@uip.edu.pe</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Universidad Nacional de Innovación Peruana. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
 </body>
