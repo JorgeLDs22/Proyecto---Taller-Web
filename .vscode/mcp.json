@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "insforge-api-key",
+      "description": "InsForge API key for the MCP server",
+      "password": true
+    }
+  ],
+  "servers": {
+    "insforge": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@insforge/mcp@latest"],
+      "env": {
+        "API_KEY": "${input:insforge-api-key}",
+        "API_BASE_URL": "https://3y7dkmgq.us-east.insforge.app"
+      }
+    }
+  }
+}
