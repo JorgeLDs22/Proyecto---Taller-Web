@@ -67,6 +67,5 @@ N°,Integrante,Código UTP,Rol Scrum
 5. Edgar Bonnet Galvez Ipanaque,U21224589,Developer UI / QA
 
 Docente: Rodriguez Lazo, Miguel Jaeger — Lima, Perú (2026)
-=======
-# Proyecto---Taller-Web
+
 
