@@ -69,20 +69,4 @@ N°,Integrante,Código UTP,Rol Scrum
 Docente: Rodriguez Lazo, Miguel Jaeger — Lima, Perú (2026)
 =======
 # Proyecto---Taller-Web
-Proyecto del curso de Taller Web
-Integrantes del Proyecto:
-1. Jorge Luis Juarez Carrillo u24258380
-2. Felix Alexander Ayasta Ballena u21308807
-3. Leonardo Daniel Huaman Riojas u23205177
-4. Anghelo Rainiero López Castilla u23240905
-5. Edgar Bonnet Galvez Ipanaque u21224589
-
-## Intranet
-
-- `intranet-docente.html` y `intranet-alumno.html` validan la sesión y el rol/código institucional en `profiles` antes de mostrar cursos.
-- Los perfiles requieren un código único `DOC-...` o `EST-...`; la asignación del rol y la creación de usuarios son tareas administrativas, no se realizan desde el formulario público.
-- La migración `20261121154121_add-intranet-workflows.sql` agrega semanas, entregas/calificaciones y permisos RLS. El bucket privado `course-files` almacena materiales y entregables.
-- Para un entorno nuevo, aplicar las migraciones con `npx -y @insforge/cli db migrations up --all` y crear el bucket con `npx -y @insforge/cli storage create-bucket course-files --private`.
-- Las cuentas demo deben crearse primero en Auth Dashboard con los correos `demo.docente01@unip.edu.pe`–`demo.docente03@unip.edu.pe` y `demo.alumno01@unip.edu.pe`–`demo.alumno10@unip.edu.pe`. Luego, ejecutar `scripts/provision-demo-profiles.sql` en el SQL Editor del Dashboard. El script solo inserta perfiles si encuentra las 13 cuentas y devuelve los códigos creados; usa invitaciones o enlaces de restablecimiento para que cada usuario defina su contraseña.
-- Las solicitudes de admisión se guardan en `admission_contacts`; el navegador conserva hasta 50 respaldos locales en `localStorage`.
 
