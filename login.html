@@ -64,36 +64,26 @@
           <button class="button button-submit" type="submit">
             <span data-submit-label>Ingresar como alumno</span><span aria-hidden="true">→</span>
           </button>
+          <button class="forgot-password-link" type="button" data-open-reset>¿Olvidaste tu contraseña?</button>
           <p id="login-status" class="form-status" role="status" aria-live="polite"></p>
         </form>
 
-        <section class="intranet-dashboard" data-intranet hidden aria-labelledby="dashboard-title">
-          <div class="dashboard-heading">
-            <div>
-              <p class="eyebrow"><span></span> Mi intranet</p>
-              <h2 id="dashboard-title">Hola, <span data-user-name></span></h2>
-            </div>
-            <button class="sign-out-button" type="button" data-sign-out>Cerrar sesión</button>
-          </div>
-          <p class="dashboard-role" data-user-role></p>
-          <div class="dashboard-section">
-            <h3>Mis cursos</h3>
-            <div class="dashboard-list" data-course-list aria-live="polite"></div>
-          </div>
-          <div class="dashboard-section">
-            <h3>Tareas</h3>
-            <div class="dashboard-list" data-assignment-list aria-live="polite"></div>
-          </div>
-          <div class="dashboard-section">
-            <h3>Recursos</h3>
-            <div class="dashboard-list" data-resource-list aria-live="polite"></div>
-          </div>
-          <p class="form-status" data-dashboard-status role="status" aria-live="polite"></p>
-        </section>
         <p class="login-help">¿Necesitas ayuda? Consulta los canales oficiales de tu institución.</p>
       </div>
       <footer class="login-footer"><span>© <span data-current-year></span> UNIP</span><a href="index.html">Portal institucional</a></footer>
     </section>
   </main>
+  <dialog class="content-modal reset-modal" data-reset-modal aria-labelledby="reset-title">
+    <button class="modal-close" type="button" data-modal-close aria-label="Cerrar ventana">×</button>
+    <p class="eyebrow"><span></span> Recuperación de cuenta</p>
+    <h2 id="reset-title">Restablece tu contraseña</h2>
+    <p>Ingresa el correo institucional asociado a tu cuenta. Si existe una cuenta, recibirás un enlace para restablecer la contraseña.</p>
+    <form class="reset-form" data-reset-form>
+      <label for="reset-email">Correo institucional</label>
+      <input id="reset-email" name="email" type="email" autocomplete="email" required placeholder="nombre@unip.edu.pe">
+      <button class="button button-submit" type="submit">Enviar enlace <span aria-hidden="true">→</span></button>
+      <p class="form-status" data-reset-status role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
 </body>
 </html>

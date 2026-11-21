@@ -17,7 +17,11 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; }
-body { margin: 0; color: var(--ink); background: var(--surface); font-family: var(--font-body); transition: color .25s, background .25s; }
+body { margin: 0; color: var(--ink); background: var(--surface); font-family: var(--font-body); transition: background-color .35s ease, color .35s ease, border-color .35s ease; }
+header, .intro-section, .careers-section, .curriculum-section, .admission-card, .curriculum-step,
+.footer-columns, .content-modal, .theme-toggle, .admission-form input, .admission-form select, .admission-form textarea {
+  transition: background-color .35s ease, color .35s ease, border-color .35s ease;
+}
 a { color: inherit; text-decoration: none; }
 button, input { font: inherit; }
 .skip-link { position: fixed; z-index: 20; top: 10px; left: 10px; padding: 12px 16px; color: #fff; background: var(--navy); transform: translateY(-160%); }
@@ -50,6 +54,7 @@ h1 em, h2 em { color: var(--gold); font-style: normal; }
 .hero-actions { display: flex; align-items: center; gap: 30px; }
 .button { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; gap: 28px; padding: 0 22px; font-size: 13px; font-weight: 700; transition: transform .2s, background .2s; }
 .button:hover { transform: translateY(-2px); }
+button:not(.menu-toggle):not(.password-toggle):not(.theme-toggle):hover { transform: translateY(-1px); }
 .button-gold { color: var(--navy-deep); background: var(--gold); }
 .button-gold:hover { background: #e4c27e; }
 .button span { font-size: 18px; }
@@ -76,6 +81,8 @@ h1 em, h2 em { color: var(--gold); font-style: normal; }
 .section-description { max-width: 340px; margin: 0 0 7px; color: var(--muted); font-size: 14px; line-height: 1.8; }
 .career-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
 .career-card { position: relative; min-height: 310px; overflow: hidden; color: #fff; background: var(--navy); }
+.career-card { transition: transform .3s ease, box-shadow .3s ease; }
+.career-card:hover { transform: translateY(-5px); box-shadow: 0 16px 35px rgb(7 28 44 / 20%); }
 .career-card::after { position: absolute; inset: 0; background: linear-gradient(180deg, rgb(7 28 44 / 2%) 20%, rgb(7 28 44 / 88%) 100%); content: ""; transition: background .25s; }
 .career-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .45s; }
 .career-card:hover img { transform: scale(1.055); }
@@ -111,6 +118,9 @@ h1 em, h2 em { color: var(--gold); font-style: normal; }
 .admission-form input:focus, .admission-form select:focus, .admission-form textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgb(215 173 96 / 20%); }
 .admission-form .admission-consent { display: flex; align-items: flex-start; gap: 9px; margin: 8px 0; color: rgb(255 255 255 / 72%); font-size: 10px; font-weight: 400; line-height: 1.5; }
 .admission-consent input { flex: 0 0 auto; margin: 1px 0 0; accent-color: var(--gold); }
+.inline-link { display: inline; padding: 0; color: #a77d34; border: 0; background: transparent; cursor: pointer; font: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.field-error { min-height: 14px; color: #a43e3e; font-size: 10px; }
+.admission-form [aria-invalid="true"] { border-color: #b43e3e; }
 .admission-status { min-height: 16px; margin: 0; color: rgb(255 255 255 / 80%); font-size: 11px; line-height: 1.5; }
 .admission-status[data-state="error"] { color: #ffc2b8; }
 .admission-status[data-state="success"] { color: #b9efce; }
@@ -178,7 +188,7 @@ h1 em, h2 em { color: var(--gold); font-style: normal; }
 .theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
 .theme-icon { font-size: 16px; }
 .career-carousel { overflow: hidden; }
-.career-grid { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 5px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.career-grid { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 5px; scroll-behavior: smooth; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .career-grid::-webkit-scrollbar { display: none; }
 .career-card { flex: 0 0 calc((100% - 30px) / 3); scroll-snap-align: start; }
 .career-card-trigger { position: absolute; z-index: 1; inset: 0; width: 100%; padding: 0; color: inherit; border: 0; background: transparent; cursor: pointer; text-align: left; }
@@ -217,11 +227,12 @@ h1 em, h2 em { color: var(--gold); font-style: normal; }
 .admission-card h2 { margin: 0; color: var(--navy); font-family: var(--font-display); font-size: 32px; }
 .admission-card h2::after { display: block; width: 42px; height: 2px; margin-top: 12px; background: var(--gold); content: ""; }
 .admission-card > p { margin: 13px 0 20px; color: var(--muted); font-size: 12px; line-height: 1.65; }
-.admission-form { grid-template-columns: 1fr 1fr; column-gap: 13px; }
+.admission-form { grid-template-columns: minmax(0, 1fr); column-gap: 13px; }
 .admission-form > label { color: #34434c; }
 .admission-form > label:nth-of-type(5), .admission-form textarea, .admission-form .admission-consent, .admission-form button, .admission-form .admission-status { grid-column: 1 / -1; }
 .admission-form textarea { min-height: 68px; }
 .admission-form .admission-consent { color: #64737b; }
+.admission-form > label, .admission-form input, .admission-form select, .admission-form textarea, .admission-form .field-error { grid-column: 1 / -1; }
 .button-submit-admission { min-height: 48px; justify-content: space-between; padding-inline: 16px; color: var(--gold); border: 0; background: #111722; cursor: pointer; font-size: 12px; font-weight: 700; }
 .button-submit-admission:hover { background: var(--navy); }
 .button-submit-admission:disabled { cursor: wait; opacity: .7; }
@@ -230,7 +241,7 @@ h1 em, h2 em { color: var(--gold); font-style: normal; }
 .admission-status[data-state="success"] { color: #276947; }
 .admission-decoration { display: none; }
 .site-footer { display: block; padding: 0 7.2%; border-top: 2px solid var(--gold); background: #111722; }
-.footer-columns { display: grid; grid-template-columns: 1.15fr .85fr 1fr; gap: 8%; padding-block: 52px 38px; }
+.footer-columns { display: grid; width: min(100%, 1200px); grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 5vw, 64px); margin-inline: auto; padding-block: 52px 38px; }
 .footer-column h2 { margin: 0 0 22px; color: #fff; font-family: var(--font-display); font-size: 16px; }
 .footer-column h2::after { width: 37px; height: 2px; margin-top: 10px; }
 .footer-column .brand-footer { margin-bottom: 15px; }
@@ -242,6 +253,14 @@ h1 em, h2 em { color: var(--gold); font-style: normal; }
 .footer-contact p span { color: var(--gold); }
 .copyright { display: block; padding: 20px 0; color: rgb(255 255 255 / 50%); border-top: 1px solid rgb(255 255 255 / 13%); font-size: 10px; text-align: center; }
 .content-modal { position: fixed; width: min(680px, calc(100% - 32px)); max-height: min(85vh, 760px); padding: clamp(25px, 5vw, 48px); color: var(--ink); border: 0; border-top: 4px solid var(--gold); background: var(--surface); box-shadow: 0 24px 80px rgb(0 0 0 / 35%); }
+.content-modal[open] { animation: modal-enter .22s ease-out both; }
+@keyframes modal-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.legal-modal { overflow-y: auto; }
+.legal-copy { margin-bottom: 24px; }
+.legal-copy h3 { margin: 19px 0 6px; color: #a77d34; font-size: 14px; }
+.legal-copy p { margin: 0 0 12px; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.reveal-ready { opacity: 0; transform: translateY(20px); }
+.reveal-ready.is-revealed { opacity: 1; transform: translateY(0); transition: opacity .55s ease, transform .55s cubic-bezier(.2, .7, .2, 1); }
 .content-modal::backdrop { background: rgb(5 15 24 / 68%); backdrop-filter: blur(3px); }
 .content-modal h2 { margin: 0 35px 24px 0; font-family: var(--font-display); font-size: clamp(30px, 5vw, 44px); line-height: 1.15; }
 .modal-close { position: absolute; top: 14px; right: 17px; width: 36px; height: 36px; color: var(--ink); border: 1px solid var(--line); background: transparent; cursor: pointer; font-size: 25px; line-height: 1; }
@@ -273,13 +292,18 @@ h1 em, h2 em { color: var(--gold); font-style: normal; }
 [data-theme="dark"] .carousel-controls > button { color: var(--ink); border-color: var(--line); }
 [data-theme="dark"] .carousel-controls > button:hover { color: #fff; }
 [data-theme="dark"] .content-modal { color: var(--ink); }
+[data-theme="dark"] .admission-card { color: var(--ink); background: var(--surface-soft); }
+[data-theme="dark"] .admission-card h2, [data-theme="dark"] .admission-form > label { color: var(--ink); }
+[data-theme="dark"] .admission-form .admission-consent { color: var(--muted); }
+[data-theme="dark"] .admission-form input:not([type="checkbox"]), [data-theme="dark"] .admission-form select,
+[data-theme="dark"] .admission-form textarea { color: var(--ink); border-color: var(--line); background: #19232d; }
 
 @media (max-width: 800px) {
   .site-header > .theme-toggle { margin-left: auto; margin-right: 10px; }
   .admission-inner { grid-template-columns: 1fr; gap: 42px; }
   .admission-card { max-width: 620px; }
-  .footer-columns { grid-template-columns: 1fr 1fr; gap: 35px; }
-  .footer-contact { grid-column: 1 / -1; }
+  .footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 35px; }
+  .footer-contact { grid-column: auto; }
 }
 @media (min-width: 801px) and (max-width: 1000px) {
   .site-header > .theme-toggle { margin-left: 12px; padding-inline: 8px; }
@@ -291,4 +315,8 @@ h1 em, h2 em { color: var(--gold); font-style: normal; }
   .admission-form > label, .admission-form input, .admission-form select { grid-column: 1 / -1; }
   .footer-columns { grid-template-columns: 1fr; gap: 27px; padding-block: 38px 28px; }
   .footer-contact { grid-column: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready, .reveal-ready.is-revealed { opacity: 1; transform: none; transition: none; }
+  .content-modal[open] { animation: none; }
 }

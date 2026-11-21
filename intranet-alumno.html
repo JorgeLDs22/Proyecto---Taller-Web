@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102f4a">
+  <title>Intranet alumno | UNIP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/login_styles.css">
+  <link rel="stylesheet" href="assets/css/intranet_styles.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body class="intranet-page" data-intranet-role="alumno">
+  <a class="skip-link" href="#intranet-main">Saltar al contenido</a>
+  <header class="intranet-header">
+    <a class="brand intranet-brand" href="index.html" aria-label="UNIP, inicio">
+      <img src="assets/img/logo.png" alt="" width="50" height="50">
+      <span><strong>UNIP</strong><small>Intranet académica</small></span>
+    </a>
+    <div class="intranet-account">
+      <div class="account-name"><strong data-user-name>Cargando perfil...</strong><span data-user-code></span></div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Activar modo oscuro" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Modo oscuro</span>
+      </button>
+      <button class="sign-out-button" type="button" data-sign-out>Cerrar sesión</button>
+    </div>
+  </header>
+  <main class="intranet-main" id="intranet-main" hidden>
+    <section class="intranet-welcome">
+      <p class="eyebrow"><span></span> Espacio estudiantil</p>
+      <h1>Aprende a tu <em>propio ritmo.</em></h1>
+      <p>Encuentra tus cursos, revisa los materiales semanales y entrega tus trabajos.</p>
+    </section>
+    <p class="intranet-status" data-intranet-status role="status" aria-live="polite">Cargando tus cursos...</p>
+    <section class="course-list" data-course-list aria-live="polite"></section>
+    <section class="submission-panel" aria-labelledby="submission-title">
+      <div>
+        <p class="eyebrow"><span></span> Entregables</p>
+        <h2 id="submission-title">Subir Tarea / Entregable</h2>
+        <p>Selecciona una evaluación y adjunta tu archivo. El acceso al documento se limita a tu cuenta y al docente del curso.</p>
+      </div>
+      <form class="action-form submission-form" data-student-submission>
+        <label for="submission-assignment">Evaluación</label>
+        <select id="submission-assignment" name="assignment_id" required>
+          <option value="">Primero selecciona un curso con evaluaciones</option>
+        </select>
+        <label for="submission-file">Archivo (máximo 20 MB)</label>
+        <input id="submission-file" name="file" type="file" required>
+        <button class="button button-submit" type="submit">Subir entrega <span aria-hidden="true">→</span></button>
+        <p class="form-status" data-submission-status role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="intranet-footer"><a href="index.html">Portal UNIP</a><span>© <span data-current-year></span> Universidad Nacional de Innovación Peruana</span></footer>
+</body>
+</html>

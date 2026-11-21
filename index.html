@@ -181,29 +181,30 @@
           <div class="admission-card">
           <h2>Contáctanos</h2>
           <p>Déjanos tus datos y el equipo de admisión se pondrá en contacto contigo.</p>
-          <form class="admission-form" id="admission-form">
+          <form class="admission-form" id="admission-form" novalidate>
             <label for="admission-name">Nombres Completos</label>
-            <input id="admission-name" name="full_name" type="text" autocomplete="name" minlength="2" maxlength="120" required>
+            <input id="admission-name" name="full_name" type="text" autocomplete="name" minlength="2" maxlength="120" required aria-describedby="admission-name-error">
+            <small class="field-error" id="admission-name-error" data-field-error="full_name"></small>
             <label for="admission-email">Correo Electrónico</label>
-            <input id="admission-email" name="email" type="email" autocomplete="email" maxlength="254" required>
-            <label for="admission-phone">Teléfono / Celular <span>(opcional)</span></label>
-            <input id="admission-phone" name="phone" type="tel" autocomplete="tel" maxlength="30">
+            <input id="admission-email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="admission-email-error">
+            <small class="field-error" id="admission-email-error" data-field-error="email"></small>
+            <label for="admission-phone">Teléfono / Celular</label>
+            <input id="admission-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" required aria-describedby="admission-phone-error">
+            <small class="field-error" id="admission-phone-error" data-field-error="phone"></small>
             <label for="admission-program">Carrera de Interés</label>
-            <select id="admission-program" name="program_interest">
-              <option value="">Comunicación y creatividad</option>
-              <option value="">Derecho y ciudadanía </option>
-              <option value="">Educación y sociedad</option>
-              <option value="">Gestión y negocios</option>
-              <option value="">Innovación y tecnología</option>
-              <option value="">Salud y bienestar</option>
-              <option value="">Aún no lo sé</option>
+            <select id="admission-program" name="program_interest" required aria-describedby="admission-program-error">
+              <option value="" selected disabled>Selecciona una carrera</option>
+              <option value="undecided">Aún no lo sé</option>
             </select>
+            <small class="field-error" id="admission-program-error" data-field-error="program_interest"></small>
             <label for="admission-message">¿Qué te gustaría consultar?</label>
-            <textarea id="admission-message" name="message" rows="3" maxlength="2000" required placeholder="Cuéntanos cómo podemos ayudarte"></textarea>
+            <textarea id="admission-message" name="message" rows="3" maxlength="2000" required placeholder="Cuéntanos cómo podemos ayudarte" aria-describedby="admission-message-error"></textarea>
+            <small class="field-error" id="admission-message-error" data-field-error="message"></small>
             <label class="admission-consent">
-              <input name="consent" type="checkbox" required>
-              <span>Autorizo que admisión me contacte para responder esta consulta.</span>
+              <input id="admission-consent" name="consent" type="checkbox" required aria-describedby="admission-consent-error">
+              <span>Acepto los <button class="inline-link" type="button" data-open-terms>Términos y Condiciones</button> y la <button class="inline-link" type="button" data-open-terms>Política de Privacidad</button>.</span>
             </label>
+            <small class="field-error" id="admission-consent-error" data-field-error="consent"></small>
             <button class="button button-submit-admission" type="submit">Enviar Datos <span aria-hidden="true">→</span></button>
             <p class="admission-status" data-admission-status role="status" aria-live="polite"></p>
           </form>
@@ -262,6 +263,21 @@
       <li><strong>03 · Experiencia aplicada</strong><span>Integra lo aprendido en proyectos, prácticas y retos vinculados a la profesión.</span></li>
     </ol>
     <a class="button button-dark" href="#admision" data-modal-admission>Ir al formulario de admisión <span aria-hidden="true">→</span></a>
+  </dialog>
+  <dialog class="content-modal legal-modal" data-terms-modal aria-labelledby="terms-modal-title">
+    <button class="modal-close" type="button" data-modal-close aria-label="Cerrar ventana">×</button>
+    <p class="eyebrow"><span></span> Información legal</p>
+    <h2 id="terms-modal-title">Términos y Política de Privacidad</h2>
+    <div class="legal-copy">
+      <p>Al enviar este formulario, usted solicita información sobre la oferta académica y el proceso de admisión de la Universidad Nacional de Innovación Peruana (UNIP), y autoriza a su equipo de admisión a contactarle únicamente para atender dicha solicitud.</p>
+      <h3>Tratamiento de datos personales</h3>
+      <p>Los datos proporcionados serán tratados conforme a la Ley N.° 29733, Ley de Protección de Datos Personales, su reglamento vigente y las disposiciones aplicables. UNIP los utilizará para gestionar y responder consultas de admisión, adoptará medidas razonables de seguridad y no los utilizará para finalidades incompatibles ni los comunicará a terceros, salvo obligación legal o autorización válida.</p>
+      <p>Usted puede ejercer sus derechos de información, acceso, rectificación, cancelación y oposición (derechos ARCO), así como revocar el consentimiento, mediante los canales oficiales de contacto publicados por UNIP. La revocación no afecta los tratamientos realizados previamente de manera lícita.</p>
+      <h3>Información académica y admisión</h3>
+      <p>La información del portal sobre programas, mallas, requisitos y vacantes es referencial mientras no haya sido verificada y publicada oficialmente. El proceso de admisión y la prestación del servicio universitario se sujetan a la Ley N.° 30220, Ley Universitaria, al estatuto, reglamentos y demás normas aplicables. El envío del formulario no constituye postulación, admisión ni matrícula.</p>
+      <p>El consentimiento es voluntario y puede retirarse en cualquier momento. Para consultas sobre privacidad o el ejercicio de derechos, comuníquese mediante los canales oficiales de UNIP.</p>
+    </div>
+    <button class="button button-dark" type="button" data-modal-close>Entendido</button>
   </dialog>
 </body>
 </html>
